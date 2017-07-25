@@ -121,7 +121,7 @@ sub list {
 sub logout {
     my $self = shift;
 
-    if ($self->authen->username) {
+    if (defined($self->authen->username)) {
         $self->authen->logout;
         $self->session_delete;
     }
@@ -132,7 +132,7 @@ sub logout {
 sub login {
     my $self = shift;
 
-    if ($self->authen->username) {
+    if (defined($self->authen->username)) {
         return $self->forward('on_list');
     } else {
         my $q           = $self->query();
