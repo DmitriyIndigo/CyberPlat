@@ -83,7 +83,7 @@ sub start {
     my ($self) = @_;
     my $user = $self->authen->username;
 
-    if ($user) {
+    if (defined($user)) {
         return $self->forward('on_list');
     }
 
