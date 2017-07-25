@@ -1,5 +1,6 @@
 1.Создать DB (CyberPlat/DB/tables.sql)
 2.Запустить CyberPlat/templates/cpanfile (sudo carton install cpanfile)
 3.Поменять пути в файле CyberPlat/conf/nginx.conf
-4.Запустить CyberPlat/script/cyber_plat.pl
-5.Переходим по http://localhost:8080/cyberplat
+4.Запустить nginx  sudo /usr/sbin/nginx -c $path/nginx.conf ($path - путь до папки)
+5.Запустить CyberPlat/script/cyber_plat.pl
+6.Переходим по http://localhost:8080/cyberplat
