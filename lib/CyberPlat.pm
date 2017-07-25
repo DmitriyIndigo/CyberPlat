@@ -18,8 +18,6 @@ use CGI::Application::Plugin::Forward;
 
 use lib::abs;
 
-my $path = lib::abs::path('..');
-
 sub setup {
     my $self = shift;
 
@@ -45,6 +43,8 @@ sub cgiapp_init {
             WRAPPER     => 'page.tt2',
         }
     );
+
+    my $path = lib::abs::path('..');
 
     $self->tt_include_path(["$path/templates"]);
 
