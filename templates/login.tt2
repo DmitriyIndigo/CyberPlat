@@ -1,0 +1,28 @@
+[% IF error %]
+    <span class="red">[% error | html %]</span><br>
+[% END %]
+
+[% IF auth %]
+    <span class="yellow">[% auth | html %]</span><br>
+[% END %]
+
+<form action="/cyberplat" method="POST">
+    <input type="hidden" name="step" value="on_login">
+
+    <div class="row">
+        <input type="text" size="128" name="name" maxlength="128">
+        <label for="name">Name</label>
+    </div>
+
+    <div class="row">
+        <input type="email" size="128" name="email" maxlength="128" class="validate">
+        <label for="name" data-error="wrong" data-success="right">Email</label>
+    </div>
+    
+    <div class="row">
+        <button class="btn waves-effect waves-light" type="submit" name="action">
+            Enter
+            <i class="material-icons right">account_box</i>
+        </button>
+    </div>
+</form>

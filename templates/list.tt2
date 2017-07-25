@@ -1,0 +1,33 @@
+[% MACRO macro_order BLOCK %]
+[% IF field_name != field %]asc[% ELSE %][% order == 'asc' ? 'desc' : 'asc' %][% END %]
+[% END %]
+
+<p>List of all users</p>
+<a href="/cyberplat?step=on_logout" class="waves-effect waves-light btn"><i class="material-icons right">exit_to_app</i>Exit</a><br><br>
+
+[% IF errors.size %]
+    [% FOREACH error IN errors %]
+        <span class="red">[% error | html %]</span><br>
+    [% END %]
+[% ELSE %]
+
+    <table class="highlight bordered">
+        <thead>
+          <tr>
+              <th><a href="/cyberplat?step=on_list&field=name&order=[% macro_order(field_name='name', field=cur_field, order=cur_order) %]">name</a></th>
+              <th><a href="/cyberplat?step=on_list&field=email&order=[% macro_order(field_name='email', field=cur_field, order=cur_order) %]">email</a></th>
+              <th><a href="/cyberplat?step=on_list&field=create_time&order=[% macro_order(field_name='create_time', field=cur_field, order=cur_order) %]">registration date</a></th>
+          </tr>
+        </thead>
+    
+        <tbody>
+        [% FOREACH row IN users %]
+          <tr>
+            <td>[% row.name | html %]</td>
+            <td>[% row.email | html %]</td>
+            <td>[% row.create_time | html %]</td>
+          </tr>
+        [% END %]
+        </tbody>
+    </table>
+[% END %]
