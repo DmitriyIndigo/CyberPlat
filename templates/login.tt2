@@ -2,10 +2,6 @@
     <span class="red">[% error | html %]</span><br>
 [% END %]
 
-[% IF auth %]
-    <span class="yellow">[% auth | html %]</span><br>
-[% END %]
-
 <form action="/cyberplat" method="POST">
     <input type="hidden" name="step" value="on_login">
 

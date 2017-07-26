@@ -18,10 +18,7 @@ use CGI::Application::Plugin::Authentication;
 use CGI::Application::Plugin::Forward;
 
 use lib::abs;
-<<<<<<< HEAD
 use Email::Valid::Loose;
-=======
->>>>>>> 90566144e5bc523e26b64b901bcf97f7d0b68031
 
 sub setup {
     my $self = shift;
@@ -52,10 +49,6 @@ sub cgiapp_init {
     );
 
     my $path = lib::abs::path('..');
-<<<<<<< HEAD
-=======
-
->>>>>>> 90566144e5bc523e26b64b901bcf97f7d0b68031
     $self->tt_include_path(["$path/templates"]);
 
     $self->dbh_config(
@@ -136,14 +129,7 @@ sub list {
 sub login {
     my $self = shift;
 
-<<<<<<< HEAD
     return $self->forward('on_list') if defined($self->authen->username);
-=======
-    if (defined($self->authen->username)) {
-        $self->authen->logout;
-        $self->session_delete;
-    }
->>>>>>> 90566144e5bc523e26b64b901bcf97f7d0b68031
 
     my $q = $self->query();
 
@@ -151,17 +137,9 @@ sub login {
     my @missing_params =
       grep {my $v = $params{$_} = $q->param($_); !defined($v) || length($v) == 0} qw(name email);
 
-<<<<<<< HEAD
     return $self->tt_process('login.tt2',
         {error => sprintf('Missing required params: %s', join(', ', @missing_params))})
       if @missing_params;
-=======
-    if (defined($self->authen->username)) {
-        return $self->forward('on_list');
-    } else {
-        my $q           = $self->query();
-        my $email_param = $q->param('email');
->>>>>>> 90566144e5bc523e26b64b901bcf97f7d0b68031
 
     push(my @warn, 'name') unless $params{'name'} =~ m/^\w{1,15}\z/;
     push(@warn, 'email') unless Email::Valid::Loose->address($params{'email'});
