@@ -1,0 +1,856 @@
+# carton snapshot format: version 1.0
+DISTRIBUTIONS
+  AppConfig-1.71
+    pathname: N/NE/NEILB/AppConfig-1.71.tar.gz
+    provides:
+      AppConfig 1.71
+      AppConfig::Args 1.71
+      AppConfig::CGI 1.71
+      AppConfig::File 1.71
+      AppConfig::Getopt 1.71
+      AppConfig::State 1.71
+      AppConfig::Sys 1.71
+    requirements:
+      ExtUtils::MakeMaker 0
+      Test::More 0
+      perl 5.008008
+  CGI-4.36
+    pathname: L/LE/LEEJO/CGI-4.36.tar.gz
+    provides:
+      CGI 4.36
+      CGI::Carp 4.36
+      CGI::Cookie 4.36
+      CGI::File::Temp 4.36
+      CGI::HTML::Functions undef
+      CGI::MultipartBuffer 4.36
+      CGI::Pretty 4.36
+      CGI::Push 4.36
+      CGI::Util 4.36
+      Fh 4.36
+    requirements:
+      Carp 0
+      Config 0
+      Encode 0
+      Exporter 0
+      ExtUtils::MakeMaker 0
+      File::Spec 0.82
+      File::Temp 0.17
+      HTML::Entities 3.69
+      base 0
+      if 0
+      overload 0
+      parent 0.225
+      perl 5.008001
+      strict 0
+      utf8 0
+      warnings 0
+  CGI-Application-4.50
+    pathname: M/MA/MARKSTOS/CGI-Application-4.50.tar.gz
+    provides:
+      CGI::Application 4.50
+      CGI::Application::Mailform 0
+    requirements:
+      CGI 0
+      Carp 0
+      Class::ISA 0
+      HTML::Template 0
+      Test::More 0.47
+  CGI-Application-Plugin-Authentication-0.21
+    pathname: W/WE/WESM/CGI-Application-Plugin-Authentication-0.21.tar.gz
+    provides:
+      CGI::Application::Plugin::Authentication 0.21
+      CGI::Application::Plugin::Authentication::Display 0.21
+      CGI::Application::Plugin::Authentication::Display::Basic 0.21
+      CGI::Application::Plugin::Authentication::Display::Classic 0.21
+      CGI::Application::Plugin::Authentication::Driver 0.21
+      CGI::Application::Plugin::Authentication::Driver::Authen::Simple 0.21
+      CGI::Application::Plugin::Authentication::Driver::DBI 0.21
+      CGI::Application::Plugin::Authentication::Driver::Dummy 0.21
+      CGI::Application::Plugin::Authentication::Driver::Filter::crypt 0.21
+      CGI::Application::Plugin::Authentication::Driver::Filter::lc 0.21
+      CGI::Application::Plugin::Authentication::Driver::Filter::md5 0.21
+      CGI::Application::Plugin::Authentication::Driver::Filter::sha1 0.21
+      CGI::Application::Plugin::Authentication::Driver::Filter::strip 0.21
+      CGI::Application::Plugin::Authentication::Driver::Filter::uc 0.21
+      CGI::Application::Plugin::Authentication::Driver::Generic 0.21
+      CGI::Application::Plugin::Authentication::Driver::HTPasswd 0.21
+      CGI::Application::Plugin::Authentication::Store 0.21
+      CGI::Application::Plugin::Authentication::Store::Cookie 0.21
+      CGI::Application::Plugin::Authentication::Store::Session 0.21
+    requirements:
+      Attribute::Handlers 0
+      CGI 3.16
+      CGI::Application 4
+      Class::ISA 0
+      Digest::SHA 0
+      ExtUtils::MakeMaker 0
+      MIME::Base64 0
+      Scalar::Util 0
+      UNIVERSAL::require 0
+      perl 5.008
+  CGI-Application-Plugin-Config-Simple-1.01
+    pathname: W/WO/WONKO/CGI-Application-Plugin-Config-Simple-1.01.tar.gz
+    provides:
+      CGI::Application::Plugin::Config::Simple 1.01
+    requirements:
+      CGI::Application 3.21
+      Config::Simple 0
+      Exporter 0
+      Test::More 0
+  CGI-Application-Plugin-DBH-4.04
+    pathname: F/FR/FREW/CGI-Application-Plugin-DBH-4.04.tar.gz
+    provides:
+      CGI::Application::Plugin::DBH 4.04
+    requirements:
+      CGI::Application 0
+      DBI 0
+      ExtUtils::MakeMaker 6.30
+      parent 0
+  CGI-Application-Plugin-Forward-1.06
+    pathname: M/MG/MGRAHAM/CGI-Application-Plugin-Forward-1.06.tar.gz
+    provides:
+      CGI::Application::Plugin::Forward 1.06
+    requirements:
+      CGI::Application 0
+      Test::More 0
+  CGI-Application-Plugin-Session-1.05
+    pathname: F/FR/FREW/CGI-Application-Plugin-Session-1.05.tar.gz
+    provides:
+      CGI::Application::Plugin::Session 1.05
+    requirements:
+      CGI::Application 3.21
+      CGI::Session 4.48
+      ExtUtils::MakeMaker 6.30
+      File::Spec 0
+      Scalar::Util 0
+  CGI-Application-Plugin-TT-1.05
+    pathname: C/CE/CEESHEK/CGI-Application-Plugin-TT-1.05.tar.gz
+    provides:
+      CGI::Application::Plugin::TT 1.05
+    requirements:
+      CGI::Application 4.0
+      Class::ISA 0
+      File::Spec 0
+      Scalar::Util 0
+      Template 2.0
+  CGI-Application-Server-0.063
+    pathname: R/RJ/RJBS/CGI-Application-Server-0.063.tar.gz
+    provides:
+      CGI::Application::Server 0.063
+    requirements:
+      CGI 0
+      CGI::Application 4.21
+      Carp 0.01
+      ExtUtils::MakeMaker 6.30
+      HTTP::Response 0
+      HTTP::Server::Simple 0.18
+      HTTP::Server::Simple::CGI 0
+      HTTP::Server::Simple::Static 0.02
+      HTTP::Status 0
+      Scalar::Util 1.18
+      base 0
+      strict 0
+      warnings 0
+  CGI-Session-4.48
+    pathname: M/MA/MARKSTOS/CGI-Session-4.48.tar.gz
+    provides:
+      CGI::Session 4.48
+      CGI::Session::Driver 4.43
+      CGI::Session::Driver::DBI 4.43
+      CGI::Session::Driver::db_file 4.43
+      CGI::Session::Driver::file 4.43
+      CGI::Session::Driver::mysql 4.43
+      CGI::Session::Driver::postgresql 4.43
+      CGI::Session::Driver::sqlite 4.43
+      CGI::Session::ErrorHandler 4.43
+      CGI::Session::ID::incr 4.43
+      CGI::Session::ID::md5 4.43
+      CGI::Session::ID::static 4.44
+      CGI::Session::Serialize::default 4.43
+      CGI::Session::Serialize::freezethaw 4.43
+      CGI::Session::Serialize::storable 4.43
+      CGI::Session::Test::Default 4.47
+      CGI::Session::Test::SimpleObjectClass 0
+      CGI::Session::Tutorial 4.43
+      OverloadedClass 0
+    requirements:
+      CGI 3.26
+      Data::Dumper 0
+      Digest::MD5 0
+      Module::Build 0.38
+      Scalar::Util 0
+      Test::More 0
+  Class-ISA-0.36
+    pathname: S/SM/SMUELLER/Class-ISA-0.36.tar.gz
+    provides:
+      Class::ISA 0.36
+    requirements:
+      ExtUtils::MakeMaker 0
+      if 0
+  Config-Simple-4.58
+    pathname: S/SH/SHERZODR/Config-Simple-4.58.tar.gz
+    provides:
+      Config::Simple 4.58
+    requirements:
+      ExtUtils::MakeMaker 0
+  DBI-1.636
+    pathname: T/TI/TIMB/DBI-1.636.tar.gz
+    provides:
+      Bundle::DBI 12.008696
+      DBD::DBM 0.08
+      DBD::DBM::Statement 0.08
+      DBD::DBM::Table 0.08
+      DBD::DBM::db 0.08
+      DBD::DBM::dr 0.08
+      DBD::DBM::st 0.08
+      DBD::ExampleP 12.014311
+      DBD::ExampleP::db 12.014311
+      DBD::ExampleP::dr 12.014311
+      DBD::ExampleP::st 12.014311
+      DBD::File 0.44
+      DBD::File::DataSource::File 0.44
+      DBD::File::DataSource::Stream 0.44
+      DBD::File::Statement 0.44
+      DBD::File::Table 0.44
+      DBD::File::TableSource::FileSystem 0.44
+      DBD::File::db 0.44
+      DBD::File::dr 0.44
+      DBD::File::st 0.44
+      DBD::Gofer 0.015327
+      DBD::Gofer::Policy::Base 0.010088
+      DBD::Gofer::Policy::classic 0.010088
+      DBD::Gofer::Policy::pedantic 0.010088
+      DBD::Gofer::Policy::rush 0.010088
+      DBD::Gofer::Transport::Base 0.014121
+      DBD::Gofer::Transport::corostream undef
+      DBD::Gofer::Transport::null 0.010088
+      DBD::Gofer::Transport::pipeone 0.010088
+      DBD::Gofer::Transport::stream 0.014599
+      DBD::Gofer::db 0.015327
+      DBD::Gofer::dr 0.015327
+      DBD::Gofer::st 0.015327
+      DBD::NullP 12.014715
+      DBD::NullP::db 12.014715
+      DBD::NullP::dr 12.014715
+      DBD::NullP::st 12.014715
+      DBD::Proxy 0.2004
+      DBD::Proxy::RPC::PlClient 0.2004
+      DBD::Proxy::db 0.2004
+      DBD::Proxy::dr 0.2004
+      DBD::Proxy::st 0.2004
+      DBD::Sponge 12.010003
+      DBD::Sponge::db 12.010003
+      DBD::Sponge::dr 12.010003
+      DBD::Sponge::st 12.010003
+      DBDI 12.015129
+      DBI 1.636
+      DBI::Const::GetInfo::ANSI 2.008697
+      DBI::Const::GetInfo::ODBC 2.011374
+      DBI::Const::GetInfoReturn 2.008697
+      DBI::Const::GetInfoType 2.008697
+      DBI::DBD 12.015129
+      DBI::DBD::Metadata 2.014214
+      DBI::DBD::SqlEngine 0.06
+      DBI::DBD::SqlEngine::DataSource 0.06
+      DBI::DBD::SqlEngine::Statement 0.06
+      DBI::DBD::SqlEngine::Table 0.06
+      DBI::DBD::SqlEngine::TableSource 0.06
+      DBI::DBD::SqlEngine::TieMeta 0.06
+      DBI::DBD::SqlEngine::TieTables 0.06
+      DBI::DBD::SqlEngine::db 0.06
+      DBI::DBD::SqlEngine::dr 0.06
+      DBI::DBD::SqlEngine::st 0.06
+      DBI::Gofer::Execute 0.014283
+      DBI::Gofer::Request 0.012537
+      DBI::Gofer::Response 0.011566
+      DBI::Gofer::Serializer::Base 0.009950
+      DBI::Gofer::Serializer::DataDumper 0.009950
+      DBI::Gofer::Serializer::Storable 0.015586
+      DBI::Gofer::Transport::Base 0.012537
+      DBI::Gofer::Transport::pipeone 0.012537
+      DBI::Gofer::Transport::stream 0.012537
+      DBI::Profile 2.015065
+      DBI::ProfileData 2.010008
+      DBI::ProfileDumper 2.015325
+      DBI::ProfileDumper::Apache 2.014121
+      DBI::ProfileSubs 0.009396
+      DBI::ProxyServer 0.3005
+      DBI::ProxyServer::db 0.3005
+      DBI::ProxyServer::dr 0.3005
+      DBI::ProxyServer::st 0.3005
+      DBI::SQL::Nano 1.015544
+      DBI::SQL::Nano::Statement_ 1.015544
+      DBI::SQL::Nano::Table_ 1.015544
+      DBI::Util::CacheMemory 0.010315
+      DBI::Util::_accessor 0.009479
+      DBI::common 1.636
+    requirements:
+      ExtUtils::MakeMaker 6.48
+      Test::Simple 0.90
+      perl 5.008
+  Digest-HMAC-1.03
+    pathname: G/GA/GAAS/Digest-HMAC-1.03.tar.gz
+    provides:
+      Digest::HMAC 1.03
+      Digest::HMAC_MD5 1.01
+      Digest::HMAC_SHA1 1.03
+    requirements:
+      Digest::MD5 2
+      Digest::SHA 1
+      ExtUtils::MakeMaker 0
+      perl 5.004
+  Email-Valid-1.202
+    pathname: R/RJ/RJBS/Email-Valid-1.202.tar.gz
+    provides:
+      Email::Valid 1.202
+    requirements:
+      ExtUtils::MakeMaker 0
+      Mail::Address 0
+      Net::DNS 0
+      Scalar::Util 0
+      Test::More 0
+      perl 5.006
+  Email-Valid-Loose-0.05
+    pathname: M/MI/MIYAGAWA/Email-Valid-Loose-0.05.tar.gz
+    provides:
+      Email::Valid::Loose 0.05
+    requirements:
+      Email::Valid 0.17
+      ExtUtils::MakeMaker 0
+      Test::More 0.32
+  Encode-Locale-1.05
+    pathname: G/GA/GAAS/Encode-Locale-1.05.tar.gz
+    provides:
+      Encode::Locale 1.05
+    requirements:
+      Encode 2
+      Encode::Alias 0
+      ExtUtils::MakeMaker 0
+      perl 5.008
+  File-LibMagic-1.15
+    pathname: D/DR/DROLSKY/File-LibMagic-1.15.tar.gz
+    provides:
+      File::LibMagic 1.15
+    requirements:
+      Carp 0
+      Exporter 0
+      ExtUtils::CBuilder 0
+      ExtUtils::MakeMaker 0
+      Scalar::Util 0
+      XSLoader 0
+      base 0
+      perl 5.008
+      strict 0
+      warnings 0
+  HTML-Parser-3.72
+    pathname: G/GA/GAAS/HTML-Parser-3.72.tar.gz
+    provides:
+      HTML::Entities 3.69
+      HTML::Filter 3.72
+      HTML::HeadParser 3.71
+      HTML::LinkExtor 3.69
+      HTML::Parser 3.72
+      HTML::PullParser 3.57
+      HTML::TokeParser 3.69
+    requirements:
+      ExtUtils::MakeMaker 0
+      HTML::Tagset 3
+      XSLoader 0
+      perl 5.008
+  HTML-Tagset-3.20
+    pathname: P/PE/PETDANCE/HTML-Tagset-3.20.tar.gz
+    provides:
+      HTML::Tagset 3.20
+    requirements:
+      ExtUtils::MakeMaker 0
+  HTML-Template-2.97
+    pathname: S/SA/SAMTREGAR/HTML-Template-2.97.tar.gz
+    provides:
+      HTML::Template 2.97
+      HTML::Template::COND 2.97
+      HTML::Template::DEF 2.97
+      HTML::Template::ESCAPE 2.97
+      HTML::Template::FAQ undef
+      HTML::Template::JSESCAPE 2.97
+      HTML::Template::LOOP 2.97
+      HTML::Template::NOOP 2.97
+      HTML::Template::PRINTSCALAR 2.97
+      HTML::Template::URLESCAPE 2.97
+      HTML::Template::VAR 2.97
+    requirements:
+      CGI 0
+      Carp 0
+      Digest::MD5 0
+      ExtUtils::MakeMaker 0
+      File::Spec 0.82
+      Scalar::Util 0
+  HTTP-Date-6.02
+    pathname: G/GA/GAAS/HTTP-Date-6.02.tar.gz
+    provides:
+      HTTP::Date 6.02
+    requirements:
+      ExtUtils::MakeMaker 0
+      Time::Local 0
+      perl 5.006002
+  HTTP-Message-6.13
+    pathname: O/OA/OALDERS/HTTP-Message-6.13.tar.gz
+    provides:
+      HTTP::Config 6.13
+      HTTP::Headers 6.13
+      HTTP::Headers::Auth 6.13
+      HTTP::Headers::ETag 6.13
+      HTTP::Headers::Util 6.13
+      HTTP::Message 6.13
+      HTTP::Request 6.13
+      HTTP::Request::Common 6.13
+      HTTP::Response 6.13
+      HTTP::Status 6.13
+    requirements:
+      Carp 0
+      Compress::Raw::Zlib 0
+      Encode 2.21
+      Encode::Locale 1
+      Exporter 5.57
+      ExtUtils::MakeMaker 0
+      HTTP::Date 6
+      IO::Compress::Bzip2 2.021
+      IO::Compress::Deflate 0
+      IO::Compress::Gzip 0
+      IO::HTML 0
+      IO::Uncompress::Bunzip2 2.021
+      IO::Uncompress::Gunzip 0
+      IO::Uncompress::Inflate 0
+      IO::Uncompress::RawInflate 0
+      LWP::MediaTypes 6
+      MIME::Base64 2.1
+      MIME::QuotedPrint 0
+      Storable 0
+      URI 1.10
+      base 0
+      perl 5.008001
+      strict 0
+      warnings 0
+  HTTP-Server-Simple-0.52
+    pathname: B/BP/BPS/HTTP-Server-Simple-0.52.tar.gz
+    provides:
+      HTTP::Server::Simple 0.52
+      HTTP::Server::Simple::CGI undef
+      HTTP::Server::Simple::CGI::Environment undef
+    requirements:
+      CGI 0
+      ExtUtils::MakeMaker 6.36
+      Socket 1.94
+      Test::More 0
+  HTTP-Server-Simple-Static-0.12
+    pathname: S/SJ/SJQUINNEY/HTTP-Server-Simple-Static-0.12.tar.gz
+    provides:
+      HTTP::Server::Simple::Static 0.12
+    requirements:
+      CGI 3.46
+      Exporter 0
+      File::LibMagic 0
+      File::Spec::Functions 0
+      HTTP::Date 0
+      HTTP::Server::Simple 0.01
+      IO::File 0
+      Module::Build 0.40
+      URI::Escape 0
+  IO-HTML-1.001
+    pathname: C/CJ/CJM/IO-HTML-1.001.tar.gz
+    provides:
+      IO::HTML 1.001
+    requirements:
+      Carp 0
+      Encode 2.10
+      Exporter 5.57
+      ExtUtils::MakeMaker 6.30
+  LWP-MediaTypes-6.02
+    pathname: G/GA/GAAS/LWP-MediaTypes-6.02.tar.gz
+    provides:
+      LWP::MediaTypes 6.02
+    requirements:
+      ExtUtils::MakeMaker 0
+      perl 5.006002
+  MailTools-2.18
+    pathname: M/MA/MARKOV/MailTools-2.18.tar.gz
+    provides:
+      Mail undef
+      Mail::Address 2.18
+      Mail::Cap 2.18
+      Mail::Field 2.18
+      Mail::Field::AddrList 2.18
+      Mail::Field::Date 2.18
+      Mail::Field::Generic 2.18
+      Mail::Filter 2.18
+      Mail::Header 2.18
+      Mail::Internet 2.18
+      Mail::Mailer 2.18
+      Mail::Mailer::qmail 2.18
+      Mail::Mailer::rfc822 2.18
+      Mail::Mailer::sendmail 2.18
+      Mail::Mailer::smtp 2.18
+      Mail::Mailer::smtp::pipe 2.18
+      Mail::Mailer::smtps 2.18
+      Mail::Mailer::smtps::pipe 2.18
+      Mail::Mailer::testfile 2.18
+      Mail::Mailer::testfile::pipe 2.18
+      Mail::Send 2.18
+      Mail::Util 2.18
+    requirements:
+      Date::Format 0
+      Date::Parse 0
+      ExtUtils::MakeMaker 0
+      IO::Handle 0
+      Net::Domain 1.05
+      Net::SMTP 1.03
+      Test::More 0
+  Module-Build-0.4224
+    pathname: L/LE/LEONT/Module-Build-0.4224.tar.gz
+    provides:
+      Module::Build 0.4224
+      Module::Build::Base 0.4224
+      Module::Build::Compat 0.4224
+      Module::Build::Config 0.4224
+      Module::Build::Cookbook 0.4224
+      Module::Build::Dumper 0.4224
+      Module::Build::Notes 0.4224
+      Module::Build::PPMMaker 0.4224
+      Module::Build::Platform::Default 0.4224
+      Module::Build::Platform::MacOS 0.4224
+      Module::Build::Platform::Unix 0.4224
+      Module::Build::Platform::VMS 0.4224
+      Module::Build::Platform::VOS 0.4224
+      Module::Build::Platform::Windows 0.4224
+      Module::Build::Platform::aix 0.4224
+      Module::Build::Platform::cygwin 0.4224
+      Module::Build::Platform::darwin 0.4224
+      Module::Build::Platform::os2 0.4224
+      Module::Build::PodParser 0.4224
+    requirements:
+      CPAN::Meta 2.142060
+      CPAN::Meta::YAML 0.003
+      Cwd 0
+      Data::Dumper 0
+      ExtUtils::CBuilder 0.27
+      ExtUtils::Install 0
+      ExtUtils::Manifest 0
+      ExtUtils::Mkbootstrap 0
+      ExtUtils::ParseXS 2.21
+      File::Basename 0
+      File::Compare 0
+      File::Copy 0
+      File::Find 0
+      File::Path 0
+      File::Spec 0.82
+      File::Temp 0.15
+      Getopt::Long 0
+      Module::Metadata 1.000002
+      Parse::CPAN::Meta 1.4401
+      Perl::OSType 1
+      Pod::Man 2.17
+      TAP::Harness 3.29
+      Test::More 0.49
+      Text::Abbrev 0
+      Text::ParseWords 0
+      perl 5.006001
+      version 0.87
+  Net-DNS-1.11
+    pathname: N/NL/NLNETLABS/Net-DNS-1.11.tar.gz
+    provides:
+      Net::DNS 1.11
+      Net::DNS::Domain 1561
+      Net::DNS::DomainName 1558
+      Net::DNS::DomainName1035 1558
+      Net::DNS::DomainName2535 1558
+      Net::DNS::Header 1527
+      Net::DNS::Mailbox 1527
+      Net::DNS::Mailbox1035 1527
+      Net::DNS::Mailbox2535 1527
+      Net::DNS::Nameserver 1558
+      Net::DNS::Packet 1546
+      Net::DNS::Parameters 1571
+      Net::DNS::Question 1530
+      Net::DNS::RR 1569
+      Net::DNS::RR::A 1528
+      Net::DNS::RR::AAAA 1528
+      Net::DNS::RR::AFSDB 1528
+      Net::DNS::RR::APL 1548
+      Net::DNS::RR::APL::Item 1548
+      Net::DNS::RR::CAA 1561
+      Net::DNS::RR::CDNSKEY 1580
+      Net::DNS::RR::CDS 1580
+      Net::DNS::RR::CERT 1567
+      Net::DNS::RR::CNAME 1528
+      Net::DNS::RR::CSYNC 1561
+      Net::DNS::RR::DHCID 1567
+      Net::DNS::RR::DLV 1528
+      Net::DNS::RR::DNAME 1528
+      Net::DNS::RR::DNSKEY 1567
+      Net::DNS::RR::DS 1567
+      Net::DNS::RR::EUI48 1528
+      Net::DNS::RR::EUI64 1528
+      Net::DNS::RR::GPOS 1528
+      Net::DNS::RR::HINFO 1528
+      Net::DNS::RR::HIP 1528
+      Net::DNS::RR::IPSECKEY 1552
+      Net::DNS::RR::ISDN 1528
+      Net::DNS::RR::KEY 1528
+      Net::DNS::RR::KX 1528
+      Net::DNS::RR::L32 1528
+      Net::DNS::RR::L64 1528
+      Net::DNS::RR::LOC 1528
+      Net::DNS::RR::LP 1528
+      Net::DNS::RR::MB 1528
+      Net::DNS::RR::MG 1528
+      Net::DNS::RR::MINFO 1528
+      Net::DNS::RR::MR 1528
+      Net::DNS::RR::MX 1528
+      Net::DNS::RR::NAPTR 1528
+      Net::DNS::RR::NID 1528
+      Net::DNS::RR::NS 1528
+      Net::DNS::RR::NSEC 1528
+      Net::DNS::RR::NSEC3 1567
+      Net::DNS::RR::NSEC3PARAM 1528
+      Net::DNS::RR::NULL 1528
+      Net::DNS::RR::OPENPGPKEY 1528
+      Net::DNS::RR::OPT 1578
+      Net::DNS::RR::OPT::CHAIN 1578
+      Net::DNS::RR::OPT::CLIENT_SUBNET 1578
+      Net::DNS::RR::OPT::COOKIE 1578
+      Net::DNS::RR::OPT::DAU 1578
+      Net::DNS::RR::OPT::DHU 1578
+      Net::DNS::RR::OPT::EXPIRE 1578
+      Net::DNS::RR::OPT::KEY_TAG 1578
+      Net::DNS::RR::OPT::N3U 1578
+      Net::DNS::RR::OPT::PADDING 1578
+      Net::DNS::RR::OPT::TCP_KEEPALIVE 1578
+      Net::DNS::RR::PTR 1528
+      Net::DNS::RR::PX 1528
+      Net::DNS::RR::RP 1528
+      Net::DNS::RR::RRSIG 1567
+      Net::DNS::RR::RT 1528
+      Net::DNS::RR::SIG 1567
+      Net::DNS::RR::SMIMEA 1571
+      Net::DNS::RR::SOA 1546
+      Net::DNS::RR::SPF 1528
+      Net::DNS::RR::SRV 1528
+      Net::DNS::RR::SSHFP 1528
+      Net::DNS::RR::TKEY 1528
+      Net::DNS::RR::TLSA 1528
+      Net::DNS::RR::TSIG 1567
+      Net::DNS::RR::TXT 1528
+      Net::DNS::RR::URI 1528
+      Net::DNS::RR::X25 1528
+      Net::DNS::Resolver 1576
+      Net::DNS::Resolver::Base 1573
+      Net::DNS::Resolver::MSWin32 1568
+      Net::DNS::Resolver::Recurse 1555
+      Net::DNS::Resolver::UNIX 1573
+      Net::DNS::Resolver::android 1568
+      Net::DNS::Resolver::cygwin 1568
+      Net::DNS::Resolver::os2 1568
+      Net::DNS::Resolver::os390 1579
+      Net::DNS::Text 1561
+      Net::DNS::Update 1571
+      Net::DNS::ZoneFile 1526
+      Net::DNS::ZoneFile::Generator 1526
+      Net::DNS::ZoneFile::Text 1526
+    requirements:
+      Digest::HMAC 1.03
+      Digest::MD5 2.13
+      Digest::SHA 5.23
+      ExtUtils::MakeMaker 0
+      File::Spec 0.86
+      IO::Socket 1.16
+      MIME::Base64 2.11
+      Test::More 0.52
+      Time::Local 1.19
+      perl 5.006
+  Template-Toolkit-2.27
+    pathname: A/AB/ABW/Template-Toolkit-2.27.tar.gz
+    provides:
+      Template 2.27
+      Template::Base 2.78
+      Template::Config 2.75
+      Template::Constants 2.75
+      Template::Context 2.98
+      Template::Directive 2.2
+      Template::Document 2.79
+      Template::Exception 2.7
+      Template::Filters 2.87
+      Template::Grammar 2.26
+      Template::Iterator 2.68
+      Template::Monad::Assert 1
+      Template::Monad::Scalar 1
+      Template::Namespace::Constants 1.27
+      Template::Parser 2.89
+      Template::Perl 2.2
+      Template::Plugin 2.7
+      Template::Plugin::Assert 1
+      Template::Plugin::CGI 2.7
+      Template::Plugin::Datafile 2.72
+      Template::Plugin::Date 2.78
+      Template::Plugin::Date::Calc 2.78
+      Template::Plugin::Date::Manip 2.78
+      Template::Plugin::Directory 2.7
+      Template::Plugin::Dumper 2.7
+      Template::Plugin::File 2.71
+      Template::Plugin::Filter 1.38
+      Template::Plugin::Format 2.7
+      Template::Plugin::HTML 2.62
+      Template::Plugin::Image 1.21
+      Template::Plugin::Iterator 2.68
+      Template::Plugin::Math 1.16
+      Template::Plugin::Pod 2.69
+      Template::Plugin::Procedural 1.17
+      Template::Plugin::Scalar 1
+      Template::Plugin::String 2.4
+      Template::Plugin::Table 2.71
+      Template::Plugin::URL 2.74
+      Template::Plugin::View 2.68
+      Template::Plugin::Wrap 2.68
+      Template::Plugins 2.77
+      Template::Provider 2.94
+      Template::Service 2.8
+      Template::Stash 2.91
+      Template::Stash::Context 1.63
+      Template::Stash::XS undef
+      Template::Test 2.75
+      Template::TieString 2.75
+      Template::Toolkit undef
+      Template::VMethods 2.16
+      Template::View 2.91
+      bytes 2.94
+    requirements:
+      AppConfig 1.56
+      ExtUtils::MakeMaker 0
+      File::Spec 0.8
+      File::Temp 0.12
+      Scalar::Util 0
+  TimeDate-2.30
+    pathname: G/GB/GBARR/TimeDate-2.30.tar.gz
+    provides:
+      Date::Format 2.24
+      Date::Format::Generic 2.24
+      Date::Language 1.10
+      Date::Language::Afar 0.99
+      Date::Language::Amharic 1.00
+      Date::Language::Austrian 1.01
+      Date::Language::Brazilian 1.01
+      Date::Language::Bulgarian 1.01
+      Date::Language::Chinese 1.00
+      Date::Language::Chinese_GB 1.01
+      Date::Language::Czech 1.01
+      Date::Language::Danish 1.01
+      Date::Language::Dutch 1.02
+      Date::Language::English 1.01
+      Date::Language::Finnish 1.01
+      Date::Language::French 1.04
+      Date::Language::Gedeo 0.99
+      Date::Language::German 1.02
+      Date::Language::Greek 1.00
+      Date::Language::Hungarian 1.01
+      Date::Language::Icelandic 1.01
+      Date::Language::Italian 1.01
+      Date::Language::Norwegian 1.01
+      Date::Language::Oromo 0.99
+      Date::Language::Romanian 1.01
+      Date::Language::Russian 1.01
+      Date::Language::Russian_cp1251 1.01
+      Date::Language::Russian_koi8r 1.01
+      Date::Language::Sidama 0.99
+      Date::Language::Somali 0.99
+      Date::Language::Spanish 1.00
+      Date::Language::Swedish 1.01
+      Date::Language::Tigrinya 1.00
+      Date::Language::TigrinyaEritrean 1.00
+      Date::Language::TigrinyaEthiopian 1.00
+      Date::Language::Turkish 1.0
+      Date::Parse 2.30
+      Time::Zone 2.24
+    requirements:
+      ExtUtils::MakeMaker 0
+  UNIVERSAL-require-0.18
+    pathname: N/NE/NEILB/UNIVERSAL-require-0.18.tar.gz
+    provides:
+      UNIVERSAL::require 0.18
+    requirements:
+      Carp 0
+      ExtUtils::MakeMaker 0
+      Test::More 0.47
+      perl 5.006
+      strict 0
+      warnings 0
+  URI-1.72
+    pathname: E/ET/ETHER/URI-1.72.tar.gz
+    provides:
+      URI 1.72
+      URI::Escape 3.31
+      URI::Heuristic 4.20
+      URI::IRI 1.72
+      URI::QueryParam 1.72
+      URI::Split 1.72
+      URI::URL 5.04
+      URI::WithBase 2.20
+      URI::data 1.72
+      URI::file 4.21
+      URI::file::Base 1.72
+      URI::file::FAT 1.72
+      URI::file::Mac 1.72
+      URI::file::OS2 1.72
+      URI::file::QNX 1.72
+      URI::file::Unix 1.72
+      URI::file::Win32 1.72
+      URI::ftp 1.72
+      URI::gopher 1.72
+      URI::http 1.72
+      URI::https 1.72
+      URI::ldap 1.72
+      URI::ldapi 1.72
+      URI::ldaps 1.72
+      URI::mailto 1.72
+      URI::mms 1.72
+      URI::news 1.72
+      URI::nntp 1.72
+      URI::pop 1.72
+      URI::rlogin 1.72
+      URI::rsync 1.72
+      URI::rtsp 1.72
+      URI::rtspu 1.72
+      URI::sftp 1.72
+      URI::sip 1.72
+      URI::sips 1.72
+      URI::snews 1.72
+      URI::ssh 1.72
+      URI::telnet 1.72
+      URI::tn3270 1.72
+      URI::urn 1.72
+      URI::urn::isbn 1.72
+      URI::urn::oid 1.72
+    requirements:
+      Carp 0
+      Cwd 0
+      Data::Dumper 0
+      Encode 0
+      Exporter 5.57
+      ExtUtils::MakeMaker 0
+      MIME::Base64 2
+      Net::Domain 0
+      Scalar::Util 0
+      constant 0
+      integer 0
+      overload 0
+      parent 0
+      perl 5.008001
+      strict 0
+      utf8 0
+      warnings 0
+  lib-abs-0.93
+    pathname: M/MO/MONS/lib-abs-0.93.tar.gz
+    provides:
+      lib::abs 0.93
+    requirements:
+      Cwd 3.12
+      ExtUtils::MakeMaker 6.59
+      Test::More 0
+      perl 5.006

@@ -12,13 +12,13 @@ use CGI::Application::Plugin::DBH qw(dbh_config dbh dbh_default_name);
 
 use CGI::Session::Driver::mysql;
 
+use CGI::Application::Plugin::Config::Simple;
 use CGI::Application::Plugin::Session;
 use CGI::Application::Plugin::Authentication;
 use CGI::Application::Plugin::Forward;
 
 use lib::abs;
-
-my $path = lib::abs::path('..');
+use Email::Valid::Loose;
 
 sub setup {
     my $self = shift;
@@ -37,6 +37,8 @@ sub setup {
 sub cgiapp_init {
     my $self = shift;
 
+    $self->config_file('CyberPlat.conf');
+
     $self->header_add(-Content_Type => 'text/html; charset=UTF-8');
 
     $self->tt_config(
@@ -46,9 +48,14 @@ sub cgiapp_init {
         }
     );
 
+    my $path = lib::abs::path('..');
     $self->tt_include_path(["$path/templates"]);
 
-    $self->dbh_config("DBI:mysql:database=CyberPlat;host=localhost", 'root', 'root');
+    $self->dbh_config(
+        "DBI:mysql:database=" . $self->config_param('database') . ";host=" . $self->config_param('host'),
+        $self->config_param('user'),
+        $self->config_param('password')
+    );
 
     $self->session_config(
         CGI_SESSION_OPTIONS => ["driver:mysql", $self->query, {Handle => $self->dbh}],
@@ -81,9 +88,10 @@ sub cgiapp_init {
 
 sub start {
     my ($self) = @_;
+
     my $user = $self->authen->username;
 
-    if ($user) {
+    if (defined($user)) {
         return $self->forward('on_list');
     }
 
@@ -118,43 +126,55 @@ sub list {
     return $self->tt_process('list.tt2', {users => $data, cur_field => $field, cur_order => $order});
 }
 
+sub login {
+    my $self = shift;
+
+    return $self->forward('on_list') if defined($self->authen->username);
+
+    my $q = $self->query();
+
+    my %params = ();
+    my @missing_params =
+      grep {my $v = $params{$_} = $q->param($_); !defined($v) || length($v) == 0} qw(name email);
+
+    return $self->tt_process('login.tt2',
+        {error => sprintf('Missing required params: %s', join(', ', @missing_params))})
+      if @missing_params;
+
+    push(my @warn, 'name') unless $params{'name'} =~ m/^\w{1,15}\z/;
+    push(@warn, 'email') unless Email::Valid::Loose->address($params{'email'});
+
+    return $self->tt_process('login.tt2',
+        {error => sprintf('Invalid characters: %s ', join(', ', @warn))})
+       if @warn;
+
+    my $sth = $self->dbh->prepare('select name from Users where email = ?');
+    $sth->execute($params{'email'});
+
+    my $name = $sth->fetchrow_arrayref();
+
+    if (defined($name->[0])) {
+        return $self->tt_process('login.tt2', {error => 'Invalid name or email'});
+    } else {
+        my $sth = $self->dbh->prepare('Insert into Users(name, email) values (?,?)');
+        $sth->execute(@params{qw(name email)});
+
+        delete($self->authen->{'initialized'});
+        $self->authen->initialize();
+
+        return $self->forward('on_list');
+    }
+}
+
 sub logout {
     my $self = shift;
 
-    if ($self->authen->username) {
+    if (defined($self->authen->username)) {
         $self->authen->logout;
         $self->session_delete;
     }
 
     return $self->forward('on_start');
-}
-
-sub login {
-    my $self = shift;
-
-    if ($self->authen->username) {
-        return $self->forward('on_list');
-    } else {
-        my $q           = $self->query();
-        my $email_param = $q->param('email');
-
-        my $sth = $self->dbh->prepare('select name from Users where email = ?');
-        $sth->execute($email_param);
-
-        my $name = $sth->fetchrow_arrayref();
-
-        if (defined($name->[0]) || $email_param eq '') {
-            return $self->tt_process('login.tt2', {error => 'Invalid name or email'});
-        } else {
-            my $name_param = $q->param('name');
-
-            my $sth = $self->dbh->prepare('Insert into Users(name, email) values (?,?)');
-            $sth->execute($name_param, $email_param);
-
-            #return $self->forward('on_list');
-            return $self->tt_process('login.tt2', {auth => 'You are authorized, go to the site'});
-        }
-    }
 }
 
 1;
