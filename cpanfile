@@ -1,5 +1,4 @@
 requires 'CGI::Application';
-requires 'CGI::Application::Plugin::Config::Simple';
 requires 'CGI::Application::Plugin::TT';
 requires 'CGI::Application::Plugin::DBH';
 requires 'CGI::Session::Driver::mysql';
@@ -9,4 +8,3 @@ requires 'CGI::Application::Plugin::Forward';
 requires 'CGI::Application::Server';
 
 requires 'lib::abs';
-requires 'Email::Valid::Loose';
